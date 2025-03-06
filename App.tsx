@@ -19,7 +19,7 @@ function App(): React.JSX.Element {
   };
 
   const loadPage = () => {
-    setPageURL(url)
+    setPageURL(url);
   };
 
   return (
@@ -32,7 +32,7 @@ function App(): React.JSX.Element {
       />
       <Button title="Get HTML Content" onPress={loadPage} />
       <ScrollView style={styles.content}>
-        <Text>{content ? content : "No content yet"}</Text>
+        <Text>{pageUrl && content ? content : "No content yet"}</Text>
       </ScrollView>
       <WebView
         ref={webViewRef}
